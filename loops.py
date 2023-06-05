@@ -2,7 +2,7 @@
 
 # will execute again and again untill the condition become false
 # while is designed to deal with raw thongs . it's all about do manually
-# do aruthmetic operations with while loop
+# do arithmetic operations with while loop
 
 var = 10
 while var <= 10 and var >= 0 :
@@ -26,12 +26,14 @@ for b in list(f):
 
 # range function
 # range is functon. format start , stop
+print(list(range(50,100,2)))
 
 # break is a keyword which can be used on an if condition inside while or for break the loop
 
-print(list(range(50,100)))
-
-
+for i in range(0,10):
+    if i == 5:
+        break
+    print(i)
 
 # continue
 
