@@ -34,3 +34,11 @@ for i in range(10):
     for x in numbers:
         for y in items:
             print(x, y)
+
+
+
+print(bin(-10))
+
+x = 0
+while x > 10 and x <= 0:
+    print()

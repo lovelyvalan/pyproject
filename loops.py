@@ -68,3 +68,24 @@ for j in range(len(l)):
 
 
 # presss ctrl+/ to make an comment for selectec items
+
+
+# enumarate
+
+l = ['zero','one','two','three','fore','five']
+
+for i ,v in enumerate(l):
+    print(i,v)
+print("==========================================")
+
+# enumarate works in set but unordered
+
+s = {'zero','one','two','three','fore','five'}
+
+for i,v in enumerate(s):
+    print(i,v)
+print('=================================')
+d = {0:'zero', 1:'one',2:'two',3:'three'}
+
+for i,v in enumerate(d.items()):
+    print("# {} is {}".format(i,v))
