@@ -1,4 +1,4 @@
-# this not yet to commit & push into the git repo
+# this is commited & push into the git repo
 
 
 # if num is divisible by 5 then prnt hello
