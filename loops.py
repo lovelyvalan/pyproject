@@ -1,15 +1,13 @@
 # while loop
-
 # will execute again and again untill the condition become false
 # while is designed to deal with raw thongs . it's all about do manually
 # do arithmetic operations with while loop
-
 var = 10
 while var <= 10 and var >= 0 :
     print('# {} hello world'.format(var))
     var = var - 1
 print("loop completed")
-
+print('=======')
 
 # for loop
 # for loop  is designed to deal with structured data types
