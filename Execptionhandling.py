@@ -1,15 +1,19 @@
+import os
 import sys
+
 a = 5
-b = [1,2,0,4]
+b = [1, 2, 0, 4]
 c = 2
 
-def devide(a,b):
-    if b == 0 :
+
+def devide(a, b):
+    if b == 0:
         raise ZeroDivisionError("values cant devided by zero")
 
-try :
-    devide(100,b[2])
-except (NameError,IndentationError,IndexError,ZeroDivisionError,SyntaxError,KeyError,ValueError) as e:
+
+try:
+    devide(100, b[2])
+except (NameError, IndentationError, IndexError, ZeroDivisionError, SyntaxError, KeyError, ValueError) as e:
     print("some error happened: {}".format(e))
     print(e)
 except Exception as e:
@@ -19,8 +23,6 @@ else:
     print("else :is all of the excepts wont work then this statement prints ")
 finally:
     print("whatever the case i will work")
-
-
 
 # Exception handling must be include these things
 
@@ -39,3 +41,5 @@ finally:
 # its handle the errors not in our mistake codes  
 
 """
+
+

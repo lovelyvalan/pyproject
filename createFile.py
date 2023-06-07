@@ -1,0 +1,6 @@
+file_name = input("Enter your file name here : ")
+f = open(file_name,'x')
+x = open('new_newcsv','b')
+print(f.name)
+f.close()
+print(x)

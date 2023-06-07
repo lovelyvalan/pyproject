@@ -1,9 +1,10 @@
 file_name = input("Enter tehe file name : ")
-f = open(file_name, 'w')
+f = open(file_name, 'w',newline='')
 
 i = 0
 while True:
-    f.writelines(str(input(':')))
+    s = f.writelines(str(input(':write anything here . type stop to exit !').split(',')))
+
     if i % 100 == 0:
          op = input("Write more ? [y/n]")
          if op == 'n':
@@ -16,9 +17,6 @@ while True:
                      print('invalid input please enter y or n !')
                  else:
                      break
-
-
-
 
     i = i + 1
 
