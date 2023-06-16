@@ -3,8 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 plt.style.use('fivethirtyeight')
 
-from google.colab import files
-uploaded = files.upload()
+# from google.colab import files
+# uploaded = files.upload()
 
 addi = pd.read_csv('ADDIND.BO.csv')
 addi()

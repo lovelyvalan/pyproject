@@ -197,7 +197,7 @@ def firstfunc(c):
         def subfun2(v):
             return v * y
 
-        return c * y, subfunc(12), subfun2(4)
+        return c * y, subfunc(int(input('enter num for subfunc : '))), subfun2(int(input('num  for subfunc2 : ')))
 
     return secfunc, thrdfunc, frthfunc,
 
@@ -270,12 +270,12 @@ map is the function it is iterate the values for given function
 it is also simplify the code 
 format map(function,iterable_list/etc..)
 """
-print('-====-')
+print('==========================================')
 
 
 def globalvalue():
     global sets
-    sets = [10, 20, 30, 40, 50,100,101]
+    sets = [10, 20, 30, 40, 50, 100, 101]
     return sets
 
 
@@ -291,8 +291,48 @@ print(d)
 
 
 my_lambda = lambda x: [i ** 2 if i % 2 == 0 else i ** 3 for i in range(x)]
-d = my_lambda(10)
-print(d)
+d = my_lambda(9)
+print('d is ', d)
 
 print(list(filter((lambda x: x <= 100), sets)))
+
+# filter
+k = [2, 3, 4, 5, 6, 7, 8]
+print(list(filter((lambda x: x % 2 == 0), k)))
+
+
+# list as an input
+
+def total(marks):
+    return sum(marks)
+
+
+print(total([10, 20, 30, 40, 50]))
+
+print('=============================')
+print('lambda function for if else'.upper())
+
+r = lambda x, y: f'{x} is greater than {y} ' if x > y else f'{x} less than {y}' if x < y else 'both are equal'
+print(r(8, 10))
+
+
+
+print('=============================')
+print('lambda function for iterating'.upper())
+
+l1 = [10, 20, 3, 40, 50,7]
+l2 = list(map(lambda x: x ** 2, filter(lambda y: y %2 == 0, l1)))
+# the map func takes an filterd function as a iterable value
+
+print(l2)
+
+'''
+above code
+This code creates a list called l1 with the values 10, 20, 3, 40, 50, and 7. 
+It then uses the map and filter functions to create a new list called l2. 
+The filter function filters out any even numbers from l1, and the map function squares each remaining number.
+The resulting list, l2, contains the squared values of the odd numbers in l1.
+The code then prints out the contents of l2.
+
+'''
 
