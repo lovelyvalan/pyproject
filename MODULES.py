@@ -42,6 +42,8 @@ audible.audibleapp()
 
 
 '''
+PATH variable
+
 echo $path
 create a bin folder 
 PATH=$PATH:/home/valan/Desktop/bin
@@ -51,4 +53,7 @@ PATH=$PATH://home/valan/Desktop/bin
 if you want to remove it clear this line (/home/valan/Desktop/bin) from PATH
 
 '''
+
+
+print('all functions variables inside the modules can be imported  '.upper())
 

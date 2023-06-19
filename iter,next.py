@@ -15,7 +15,6 @@ try:
     print(next(l))
     print(next(l))
     print(next(l))
-    print(next(l))
 except Exception as e:
     print("error occured {}".format(sys.exc_info()))
     print("Enter correct amount of print statements")
