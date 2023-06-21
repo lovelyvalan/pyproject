@@ -14,25 +14,29 @@ print(' 2 . CLASS')
 # classification is defined as the class
 if a rolesroys is an object is under the category of car is a class 
 '''
+from CAR.AUTOMOBILE import Automobile
 
 
-class Car():
-    type = 'suv' # class attribute
 
-    def __init__(self, make, model, regno):
-        self._make = make
-        self.model = model
-        self.regno = regno
-        self.batt = 0
+class Car(Automobile):
+    type = 'suv'  # class attribute
+
+    def __int__(self, make, model, regno):
+        super().__init__(make, model, regno)
         if self.type == "suv":
-            self.enginepow='98%'
+            self.enginepow = '98%'
         elif self.type == 'xuv':
-            self.enginepow='100%'
+            self.enginepow = '100%'
 
     def start(self):
         print('Engine has started')
         print(f'make {self.make} ,model {self.model} ,regno {self.regno} ')
         self.battery()
+
+    @classmethod
+    def build_from_Automobile(cls, b: Automobile):
+        cls(b.make, b.model, b.regno)
+        return cls
 
     def battery(self):
         print(f'battery {self.batt}% ')
@@ -55,32 +59,13 @@ class Car():
         g.start()
         return g
 
-    @property
-    def make(self):
-        return self._make
-
-
-    @make.getter
-    def make(self):
-        print(f'returning {self._make}')
-        return self._make
-
-    @make.setter
-    def make(self, make):
-        print(f'setting {self._make} to {make}')
-        self._make = make
-
-    @make.deleter
-    def make(self):
-        print(f'Deleting..{self._make}')
-        del self._make
 
 # NOTES
 '''
 object is also instance 
 
 if we use @classmethod in before the function the first argument will be a class... example cls...
-the argument cls mention the class Car
+the argument cls mention the class CAR
 
 self is called whithin the function
 but instance object is used when outside of the object or class/function
@@ -92,18 +77,14 @@ static method useful when used as in inheritance
 '''
 
 
-
-
 class School():
 
-
-    def __int__(self,total=0):
-        self._total=total
+    def __int__(self, total=0):
+        self._total = total
         self._value = 0
 
     def avg(self):
-        return self._total/5
-
+        return self._total / 5
 
     @property
     def total(self):
@@ -114,8 +95,22 @@ class School():
         print(f'Returning..{self._total} ')
 
     @total.setter
-    def total(self,s):
+    def total(self, s):
         print(f'Setting ')
-        self._total=s
+        self._total = s
 
 
+print('======================')
+
+# BIKE
+
+b = Automobile('bajaj', 'ns', 'tn6961234')
+b.make = 'ktm'
+b.model = 'duke'
+b.regno = 'tn72s1234'
+print(b.make)
+print(b.model)
+print(b.regno)
+
+c = Car.build_from_Automobile(b)
+c.start

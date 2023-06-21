@@ -1,6 +1,7 @@
 from OOPS import Car
 from OOPS import School
 
+
 # create an object for class
 
 a = Car('tata', 'indigo', 'tn92s')
@@ -32,7 +33,7 @@ k.start()
 # print(k.make)
 print('k car type ',k.type )
 Car.type='xuv'
-print('k car type ',k.type)
+print('after renaming k car type ',k.type)
 print(Car.__dict__)
 print('===========')
 
@@ -43,4 +44,5 @@ print('SCHOOL')
 o=School()
 o.total=450
 print(o.avg())
+
 
