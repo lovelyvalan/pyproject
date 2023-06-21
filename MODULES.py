@@ -35,10 +35,10 @@ it means you create a python module
 belove codes are represent it
 '''
 
-from newmodule import kuku , audible  # here newmodule is a python package .it has a kuku.py and audible.py
+from newmodule import kuku as kk, audible as ad # here newmodule is a python package .it has a kuku.py and audible.py
 
-kuku.kukufm()
-audible.audibleapp()
+kk.kukufm()
+ad.audibleapp()
 
 
 '''

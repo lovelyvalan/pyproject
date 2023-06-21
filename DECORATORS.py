@@ -90,5 +90,5 @@ def printer(msg):
     print(msg)
 
 
-printer = percent(star(dollar(printer)))
-printer(msg="Hello")
+printer = percent(star(dollar(printer)))# @dollar,@percent,@star is equvalent to this line
+printer(msg='valan'.upper())
