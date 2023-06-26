@@ -6,6 +6,7 @@ port=4545
 with socket.socket(socket.AF_INET,socket.SOCK_STREAM) as s :
     s.bind((host,port))
     s.listen()
+    print('listening...')
     conn,addr=s.accept()
     with conn :
         print(f'connect to {addr}')
@@ -13,4 +14,4 @@ with socket.socket(socket.AF_INET,socket.SOCK_STREAM) as s :
             data=conn.recv(1024)
             if not data:
                 break
-            conn.sendall(data)
+            conn.send(data)
